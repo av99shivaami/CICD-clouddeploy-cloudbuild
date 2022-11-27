@@ -3,14 +3,14 @@
 steps:
 
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '.', '-t', 'asia-south1-docker.pkg.dev/internal-pocs-cloud-team/cicd-test:${COMMIT_SHA}', '-f', 'Dockerfile']
+  args: ['build', '.', '-t', 'asia-south1-docker.pkg.dev/$PROJECT_ID/cicd-test:${COMMIT_SHA}', '-f', 'Dockerfile']
 
 
 # Push the container image
 
 
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'asia-south1-docker.pkg.dev/internal-pocs-cloud-team/cicd-test:${COMMIT_SHA}']
+  args: ['push', 'asia-south1-docker.pkg.dev/$PROJECT_ID/cicd-test:${COMMIT_SHA}']
 # Create release in Google Cloud Deploy
 
 
