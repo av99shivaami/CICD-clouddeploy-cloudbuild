@@ -1,14 +1,7 @@
-apiVersion: skaffold/v2beta26
+apiVersion: skaffold/v2beta16
 kind: Config
-metadata:
-  name: git-ops
-build:
-  artifacts:
-  - image: gcr.io/$PROJECT_ID/aman-gitops-image
-    docker:
-      dockerfile: Dockerfile
 deploy:
   kubectl:
     manifests:
-    - deployment.yaml
+      - k8s-*
   
