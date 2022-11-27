@@ -28,6 +28,6 @@ steps:
       "--delivery-pipeline", "gitops",
       "--region", "asia-south1",
       "--annotations", "commitId=${REVISION_ID}",
-      "--images", "aman-clouddeploy-image=gcr.io/$PROJECT_ID/cicd-test:${COMMIT_SHA}"
+      "--images", "tst1=gcr.io/$PROJECT_ID/cicd-test:${COMMIT_SHA}"
     ]
 
