@@ -14,13 +14,3 @@ steps:
 # Create release in Google Cloud Deploy
 
 
-- name: gcr.io/google.com/cloudsdktool/cloud-sdk
-  entrypoint: gcloud
-  args:
-    [
-      "deploy", "releases", "create", "rel-${SHORT_SHA}",
-      "--delivery-pipeline", "gitops",
-      "--region", "asia-south1",
-      "--annotations", "commitId=${REVISION_ID}",
-      "--images", "asia-south1-docker.pkg.dev/internal-pocs-cloud-team/cicd-test:${COMMIT_SHA}"
-    ]
