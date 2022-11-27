@@ -3,9 +3,9 @@
 steps:
 
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '.', '-t', 'asia-south1-docker.pkg.dev/$PROJECT_ID/cicd-test:${COMMIT_SHA}', '-f', 'Dockerfile']
-images:
-  - 'asia-south1-docker.pkg.dev/$PROJECT_ID/cicd-test:${COMMIT_SHA}'
+  args: ['build', '.', '-t', 'gcr.io/$PROJECT_ID/cicd-test:${COMMIT_SHA}', '-f', 'Dockerfile']
+#images:
+#  - 'asia-south1-docker.pkg.dev/$PROJECT_ID/cicd-test:${COMMIT_SHA}'
      
 
 
@@ -13,9 +13,9 @@ images:
 
 
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'asia-south1-docker.pkg.dev/$PROJECT_ID/cicd-test:${COMMIT_SHA}']
-images:
-  - 'asia-south1-docker.pkg.dev/$PROJECT_ID/cicd-test:${COMMIT_SHA}'
+  args: ['push', 'gcr.io/$PROJECT_ID/cicd-test:${COMMIT_SHA}']
+#images:
+#  - 'gcr.io/$PROJECT_ID/cicd-test:${COMMIT_SHA}'
 # Create release in Google Cloud Deploy
 
 
