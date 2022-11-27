@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: tst1
+        image: aman-demo-image
         ports:
         - containerPort: 80
 ---
