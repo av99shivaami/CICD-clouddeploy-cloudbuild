@@ -28,6 +28,6 @@ steps:
       "--project", "${PROJECT_ID}",
       "--region", "asia-south1",
       "--delivery-pipeline", "gitops",
-      "--images", "tst1=gcr.io/$PROJECT_ID/cicd-test:${COMMIT_SHA}"
+      "--images", "aman-demo-image=gcr.io/$PROJECT_ID/cicd-test:${COMMIT_SHA}"
     ]
 
