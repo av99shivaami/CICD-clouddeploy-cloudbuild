@@ -21,7 +21,7 @@ gke:
  cluster:  projects/$PROJECT_ID/locations/asia-south1-a/clusters/test-cluster
 executionConfigs:
 - defaultPool:
-    serviceAccount: 977300627649-compute@developer.gserviceaccount.com
+    serviceAccount: gke-sa@internal-pocs-cloud-team.iam.gserviceaccount.com
   usages:
   - RENDER 
   - DEPLOY   
