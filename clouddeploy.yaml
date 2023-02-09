@@ -7,27 +7,27 @@ metadata:
 description: main application pipeline
 serialPipeline:
   stages:
-  - targetId: qsdev
-  - targetId: qsprod
+  - targetId: qsuat
+#   - targetId: qsprod
 ---
 
 #Our 1st Cluster TARGET
 apiVersion: deploy.cloud.google.com/v1
 kind: Target
 metadata:
- name: qsdev
+ name: qsuat
 description: development cluster
 gke:
  cluster:  projects/$PROJECT_ID/locations/asia-south1-a/clusters/test-cluster
  
 ---
 
-#Our 2st Cluster TARGET
-apiVersion: deploy.cloud.google.com/v1
-kind: Target
-metadata:
- name: qsprod
-description: production cluster
-gke:
- cluster:  projects/$PROJECT_ID/locations/asia-south1-a/clusters/prod-cluster
+# #Our 2st Cluster TARGET
+# apiVersion: deploy.cloud.google.com/v1
+# kind: Target
+# metadata:
+#  name: qsprod
+# description: production cluster
+# gke:
+#  cluster:  projects/$PROJECT_ID/locations/asia-south1-a/clusters/prod-cluster
 
