@@ -27,7 +27,7 @@ steps:
       "deploy", "releases", "create", "rel-${SHORT_SHA}",
       "--project", "${PROJECT_ID}",
       "--region", "asia-south1",
-      "--delivery-pipeline", "uat",
+      "--delivery-pipeline", "uat-pipe",
       "--images", "aman-demo-image=gcr.io/$PROJECT_ID/cicd-test:${COMMIT_SHA}"
     ]
 
