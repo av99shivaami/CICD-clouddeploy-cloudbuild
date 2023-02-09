@@ -3,7 +3,7 @@
 apiVersion: deploy.cloud.google.com/v1
 kind: DeliveryPipeline
 metadata:
- name: gitops
+ name: uat-pipe
 description: main application pipeline
 serialPipeline:
   stages:
