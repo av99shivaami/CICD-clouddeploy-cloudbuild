@@ -23,10 +23,6 @@ steps:
 - name: gcr.io/google.com/cloudsdktool/cloud-sdk
   entrypoint: gcloud
   args:
-    [
-      "deploy", "releases", "create", "rel-${SHORT_SHA}",
-      "--region", "asia-south1",
-      "--delivery-pipeline", "gitops",
-      "--images", "aman-demo-image=gcr.io/$PROJECT_ID/cicd-test:${COMMIT_SHA}"
+    [ "gcloud","config","set",  "project", "internal-pocs-cloud-team"
     ]
 
