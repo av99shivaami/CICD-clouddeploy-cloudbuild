@@ -25,7 +25,6 @@ steps:
   args:
     [
       "deploy", "releases", "create", "rel-${SHORT_SHA}",
-      "--project", "internal-pocs-cloud-team",
       "--region", "asia-south1",
       "--delivery-pipeline", "gitops",
       "--images", "aman-demo-image=gcr.io/$PROJECT_ID/cicd-test:${COMMIT_SHA}"
