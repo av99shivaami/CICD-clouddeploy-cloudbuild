@@ -23,6 +23,6 @@
 - name: gcr.io/google.com/cloudsdktool/cloud-sdk
   entrypoint: gcloud
   args:
-    [ "config","set",  "project", "internal-pocs-cloud-team"
+    [ "echo","hello"
     ]
 
